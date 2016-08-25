@@ -1,0 +1,21 @@
+language: ruby
+rvm:
+  - "2.3.0"
+
+
+script:
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+
+#only for master
+deploy:
+  provider: heroku
+  api_key:
+    secure: "55514ac9-a109-47bc-8c37-d826088bf96e"
+  app: sdm2016friends
+  #on:
+  #    all_branches: true
+
+  run:
+    - "rake heroku:secrets RAILS_ENV=production"
+    - "rake db:create:all"
