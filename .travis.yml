@@ -1,23 +1,15 @@
 language: ruby
 rvm:
-  - "2.3.0"
-
+- 2.3.0
 notification:
   email: false
-
 script:
 - bundle exec rake db:create
 - bundle exec rake db:migrate
-
-#only for master
 deploy:
   provider: heroku
   api_key:
-    secure: "dc4adac0-6490-4e98-b3f0-aa1adafd0ee8"
-    app: serlertest
-  #on:
-  #    all_branches: true
-
-  run:
-    - "rake heroku:secrets RAILS_ENV=production"
-    - "rake db:create:all"
+    secure: l4+9te8j7NfCiZEtP5OI0XAB1uXDEVCBVgj1MHXb4kooCiIMXS+4j7dwj1Ec/LXRvOGIzpVK8hU8S6FoeTKL01wkA0DOs7AAaT8AtB41vTwV1Yu/bXNt2RPU9K4atiYsR4nCUO7LUcEKiNWQDQ9x/VjkxquoX/0PNslGXdht5FAvprkTmqf1IlK3NCrEawd8zBAIqq79qk2G7gTR02zPRY0Bt2UWbYqm1rmlkNDWghugrg7JJ6vrl0hpFznd2hpoftzH7kfj4gdtRS6yx1rPzCtSyuApg5fd9HibsahMnXSXsL7/6nsa8+rOQmAK9boEO+ttvsvgsT1wQRUrSrT12gM3tx81LFWXQcyFi2qw2H5phIIJYomu78Tclnv9Rl94ApY7rmWYK0ShnUQVVmpdzVIZIBOYD04/Gh9U0BSXwlz4KmvanY5jCjdfIUHPWs7PElj33KUJju04k1vAbs0HUw5F47Msp77sWM6kEbYWhQA/r6aT8NtYeDUosxAqRd5EFsYlp6s12uNgCxgizaPP0XDbl4fmrYBF0/f0S4ZrTrX4KkG2W1EyXQlvyMriXaueTAvdxJJIDUPkpkqNggEEN/V6FVOdFdwQMgUNRk+PF1yZ/+myb0zAHEH8/aDGD5Ke8Dw7LyohZAa4CoQCB4F6FNEuA/gUkHOQwnDjh6U5dqM=
+  app: serlertest
+  on:
+    repo: yuxiang8931/serlertest
