@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - development@localhost" uuid="33e55ba2-2e6d-4e76-b9e1-448be6a7f276">
+      <secret-storage>master_key</secret-storage>
+      <user-name>yuxiang</user-name>
+      <introspection-scope>postgres:public,pg_catalog,yuxiang</introspection-scope>
+      <resolve-scope>postgres:public,yuxiang</resolve-scope>
+    </data-source>
+  </component>
+</project>
